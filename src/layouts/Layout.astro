@@ -1,0 +1,87 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="sticky top-0 left-0 h-16 w-full bg-[#1d1135b8] text-white backdrop-blur-md py-4 px-6 flex flex-row justify-between z-10">
+			<p class="font-semibold text-xl">SparkHacks</p>
+			<div class="flex flex-row gap-4">
+				<a href="/">Home</a>
+				<a href="/">About</a>
+				<a href="/">FAQ</a>
+			</div>
+		</div>
+		<slot />
+		<div id="footer" class="bottom-0 left-0 h-16 w-full bg-black text-white py-4 px-6 flex flex-row justify-between z-10">
+			<div class="flex flex-row gap-4 justify-around w-full px-16">
+				<a href="/">Home</a>
+				<a href="/">About</a>
+				<a href="/">FAQ</a>
+			</div>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+
+	::-webkit-scrollbar {
+    width: 10px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+			background: #1d1135;
+			border-radius: 5px;
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+			background: rgba(255, 255, 255, 0.122);
+			border-radius: 5px;
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+			background: #555;
+	}
+
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
