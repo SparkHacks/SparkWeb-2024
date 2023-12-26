@@ -1,49 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/hero.astro';
+import Body from '../components/body.astro';
 ---
 
 <Layout title="SparkHacks">
-  <div class="text-white h-[calc(100vh-4rem)] w-full bg-gradient-to-tr from-[#1d1135] to-[#4d2db7]">
-    <div class="flex flex-row items-center justify-center h-full">
-      <div class="text-center">
-        <img class="w-96 pr-2" src="/logo.png"/>
-        <h1 class="text-6xl font-bold">SparkHacks</h1>
-        <h2 class="text-3xl font-semibold">Coming Soon</h2>
-      </div>
-    </div>
-  </div>
-  <div class="text-white px-6 pt-56 flex flex-col md:flex-row place-items-center justify-around gap-4">
-    <h1 class="pt-6 text-5xl font-bold">About<br>SparkHacks</h1>
-    <div class="max-w-screen-lg flex flex-col">
-      <div class="pt-6 md:pt-0">
-        <span>Why?</span>
-        <p class="pt-2 text-2xl">SparkHacks is a 48-hour hackathon hosted by the University of Illinois at Chicago's CS Clubs. SparkHacks is a place for students to learn, build, and share their creations with the world.</p>
-      </div>
-      <div class="pt-6">
-        <span>When?</span>
-        <p class="pt-2 text-2xl">SparkHacks will be held on Febuary xth - xth, 2024.</p>
-      </div>
-      <div class="pt-6">
-        <span>Where?</span>
-        <p class="pt-2 text-2xl">SparkHacks will be held in person @ XYZ.</p>
-      </div>
-    </div>
-  </div>
-  <div class="text-white px-6 py-56 flex flex-col place-items-center justify-around gap-4">
-    <h1 class="pt-6 text-5xl font-bold">Our Sponsors</h1>
-    <div class="pt-12 flex flex-row">
-      <div>
-        <img class="w-96 pr-2" src="/logo.png"/>
-        <p class="text-center pt-6 text-2xl font-semibold">Place Holder</p>
-      </div>
-      <div>
-        <img class="w-96 pr-2" src="/logo.png"/>
-        <p class="text-center pt-6 text-2xl font-semibold">Place Holder</p>
-      </div>
-      <div>
-        <img class="w-96 pr-2" src="/logo.png"/>
-        <p class="text-center pt-6 text-2xl font-semibold">Place Holder</p>
-      </div>
-    </div>
-  </div>
+  <Hero/>
+  <Body/>
+  
+ 
 </Layout>

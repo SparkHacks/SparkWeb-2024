@@ -4,10 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import '@fontsource/poppins';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -22,7 +23,7 @@ const { title } = Astro.props;
 			<div class="flex flex-row gap-4">
 				<a href="/">Home</a>
 				<a href="/">About</a>
-				<a href="/">FAQ</a>
+				<a href="#FAQ">FAQ</a>
 			</div>
 		</div>
 		<slot />
@@ -30,7 +31,7 @@ const { title } = Astro.props;
 			<div class="flex flex-row gap-4 justify-around w-full px-16">
 				<a href="/">Home</a>
 				<a href="/">About</a>
-				<a href="/">FAQ</a>
+				<a href="#FAQ">FAQ</a>
 			</div>
 	</body>
 </html>
