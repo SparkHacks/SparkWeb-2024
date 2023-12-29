@@ -18,12 +18,25 @@ import '@fontsource/poppins';
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="sticky top-0 left-0 h-16 w-full bg-[#1d1135b8] text-white backdrop-blur-md py-4 px-6 flex flex-row justify-between z-10">
-			<p class="font-semibold text-xl">SparkHacks</p>
+		<div id="header" class="sticky top-0 left-0 h-16 w-full bg-[#1d1135b8] text-white backdrop-blur-md py-4 px-6 flex flex-row justify-between z-10">
+			<div class="flex gap-4 text-lg">
+				<img src={"/public/logo.png"}/>
+				<h1> 2024</h1>
+			</div>
 			<div class="flex flex-row gap-4">
 				<a href="/">Home</a>
+				<a href="/">Contact</a>
+				<a href="/">Social</a>
+				<a href="/">Calendar</a>
 				<a href="/">About</a>
-				<a href="#FAQ">FAQ</a>
+			</div>
+		</div>
+			<div class="flex flex-row gap-4">
+				<a href="/">Home</a>
+				<a href="/">Contact</a>
+				<a href="/">Social</a>
+				<a href="/">Calendar</a>
+				<a href="/">About</a>
 			</div>
 		</div>
 		<slot />
