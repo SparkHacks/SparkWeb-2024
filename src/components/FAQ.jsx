@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion  } from 'framer-motion';
 import cloud from "../assets/cloud1.png";
 
@@ -32,6 +32,7 @@ const faqData = [
 
 ];
 
+
 export default function frqaskquest () {
   
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +46,7 @@ export default function frqaskquest () {
   };
 
   return (
-    <section className="w-full md:min-h-screen flex flex-col " id="FAQ">
+    <section className="w-full md:min-h-screen flex flex-col bg-stars-pattern" id="faq">
       <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
 
         <div className="">

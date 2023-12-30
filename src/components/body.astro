@@ -5,12 +5,16 @@ import FAQ from "./FAQ.jsx";
 import About from "./About.astro";
 import Schedule from "./Schedule";
 ---
-<div class="w-full h-[3868px]">
+<div class="w-full min-h-full">
 
 <About/>
 <Information client:load/>
 <Schedule/>
 <FAQ client:load/>
 <Sponsor client:load/>
+
+
+
+
 
 </div>

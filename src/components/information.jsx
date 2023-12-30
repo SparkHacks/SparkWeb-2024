@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+
 const SECOND = 1000;
 const MINUTE = 60 * SECOND;
 const HOUR = 60 * MINUTE;
@@ -30,17 +31,16 @@ function useTimer(deadline, interval = SECOND) {
 
 
 
-
 export default function Information() {
   const { days, hours, minutes, seconds } = useTimer("2024-02-09T12:00:00");
 
   return(
-    <section className="w-full h-full py-4 flex lg:flex-row flex-col lg:gap-0 gap-[50px] overflow-x-hidden">
+    <section className="bg-stars-pattern w-full min-h-[300px] py-4 mb-20 flex lg:flex-row flex-col lg:gap-0 gap-[50px] overflow-x-hidden">
       <motion.div
       initial={{  opacity: 0, x:-200 }}
       whileInView={{ opacity: 100, x:0 }}
       transition={{ duration: 1 }}
-      viewport={{ once: true, amount: .5  }}
+      viewport={{ once: true  }}
       className="w-full h-full flex-col flex justify-center items-center gap-[10px]">
         <div className="flex-row flex gap-[10px]">
           <h1 className=" animate-bounce lg:text-[50px] text-3xl">🚀</h1>
@@ -77,7 +77,7 @@ export default function Information() {
       initial={{  opacity: 0, x:200 }}
       whileInView={{ opacity: 100, x:0 }}
       transition={{ duration: 1 }}
-      viewport={{ once: true, amount: .5  }}
+      viewport={{ once: true, amount: .2  }}
       className="w-full h-full flex-col flex justify-center items-center gap-[10px]">
         <div className="flex-row flex gap-[10px]">
           <h1 className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin lg:text-[50px] 

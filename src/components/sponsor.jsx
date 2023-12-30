@@ -40,7 +40,7 @@ const sponsors = [
 
 export default function Sponsor(){
   return(
-    <section className="w-full flex flex-col overflow-x-hidden">
+    <section className="w-full flex flex-col overflow-x-hidden" id="sponsor">
       <div className="mt-20 w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
         <div className="">
         <svg xmlns="http://www.w3.org/2000/svg" width="68" height="61" viewBox="0 0 68 61" fill="none">

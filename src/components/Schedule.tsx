@@ -116,7 +116,7 @@ const schedulingData = [
 
 function ScheduleCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-[26px] min-w-[30rem] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col p-6 text-white font-poppin">
+    <div className="rounded-[26px] w-[500px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col p-6 text-white font-poppin">
       {children}
     </div>
   );
@@ -124,10 +124,10 @@ function ScheduleCard({ children }: { children: React.ReactNode }) {
 
 export default function Schedule() {
   return (
-    <section className="w-full min-h-screen">
+    <section id="schedule" className="w-full min-h-screen bg-stars-pattern">
       <StarHeader text="Schedule" />
 
-      <div className="flex flex-wrap items-center justify-center gap-5 my-10">
+      <div className="flex flex-wrap items-center justify-center gap-28 my-10">
         {schedulingData.map((day, i) => (
           <ScheduleCard key={i}>
             <h1 className="text-3xl font-[500]">{day.date}</h1>
