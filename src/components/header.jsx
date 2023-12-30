@@ -56,10 +56,10 @@ export default function Headers() {
       >
         <motion.div
         initial={{y: 0}}
-        whileInView={{y:-50}}
+        whileInView={{y:-290}}
         transition={{ duration: 2 }}
         className={`absolute -top-36  ${isMenuOpen ? 'block ' : 'hidden '}`}>
-          <img src={Rockets.src} className="w-[200px] h-[200px]"></img>
+          <img src={Rockets.src} className="w-[500px] h-[500px]"></img>
         </motion.div>
         
         
