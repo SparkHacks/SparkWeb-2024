@@ -28,7 +28,7 @@ const faqData = [
 
 ];
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion  } from 'framer-motion';
 import cloud from "../assets/cloud1.png";
 
@@ -46,7 +46,7 @@ export default function frqaskquest () {
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col " id="FAQ">
+    <section className="w-full md:min-h-screen flex flex-col " id="FAQ">
       <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
 
         <div className="">
@@ -160,7 +160,7 @@ export default function frqaskquest () {
             initial={{  x: -200 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 2 }}
-            viewport={{ once: true, amount: .9  }}
+            viewport={{ once: true, amount: .8  }}
             src={cloud.src} alt="" className="absolute md:-right-[218px] -right-[80px] md:w-[817px] md:h-[319px] w-[300px] h-[120px] "></motion.img>
             <motion.img
             initial={{ x: 200 }}
