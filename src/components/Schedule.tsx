@@ -127,7 +127,7 @@ export default function Schedule() {
     <section className="w-full min-h-screen">
       <StarHeader text="Schedule" />
 
-      <div class="flex flex-wrap items-center justify-center gap-5 my-10">
+      <div className="flex flex-wrap items-center justify-center gap-5 my-10">
         {schedulingData.map((day, i) => (
           <ScheduleCard key={i}>
             <h1 className="text-3xl font-[500]">{day.date}</h1>

@@ -1,4 +1,8 @@
 
+import { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion';
+import cloud from "../assets/cloud1.png";
+
 const faqData = [
   { 
     id: 1,
@@ -27,11 +31,6 @@ const faqData = [
   },
 
 ];
-
-import { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
-import cloud from "../assets/cloud1.png";
-
 
 export default function frqaskquest () {
   
@@ -67,7 +66,6 @@ export default function frqaskquest () {
             </filter>
           </defs>
         </svg>
-          
         </div>
 
         <h1 className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin lg:text-[50px] 
@@ -103,12 +101,7 @@ export default function frqaskquest () {
             <div key={data.id} className=" rounded-[26px] w-[319px] h-[283px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
               <h1 className="text-[#FFDAB9] text-2xl  mt-4 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">{data.question}</h1>
               <p className="text-[#FFDAB9] text-lg  mt-3 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">{data.answer}</p>
-        
-            
             </div>
-          
-          
-          
           )}
         </div>
 
@@ -117,8 +110,8 @@ export default function frqaskquest () {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="flex px-[10%] w-[300px] h-full md:hidden justify-center items-center gap-[85px] flex-row  overflow-hidden">
+          transition={{ duration: 0.5, transition: "easeIn" }}
+          className="flex px-[10%] w-[300px] h-full md:hidden justify-center items-center gap-[85px] flex-row overflow-hidden">
             <div className="rounded-[26px] max-w-[250px] max-h-[221.787px] min-w-[250px] min-h-[221.787px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
               <h1 className="text-[#FFDAB9] text-[18px] mt-4 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">
                 {faqData[currentIndex].question}
@@ -154,7 +147,7 @@ export default function frqaskquest () {
 
       </div>
 
-      <div className="w-full min-h-[1250px] absolute  overflow-y-visible ">
+      <div className="w-full min-h-[1250px] absolute overflow-y-visible ">
           <div className="overflow-x-hidden -top-[300px] absolute w-full min-h-[1250px]">
             <motion.img
             initial={{  x: -200 }}
@@ -184,8 +177,5 @@ export default function frqaskquest () {
       </div>
       
     </section>
-
-
-
   )
 }

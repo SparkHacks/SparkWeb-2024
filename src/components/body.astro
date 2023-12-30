@@ -1,16 +1,14 @@
 ---
 import ExampleScreen from "./test.astro"
-import Freqaskquest from "./freqaskquest.jsx";
+import FAQ from "./FAQ.jsx";
 import About from "./About.astro";
+import Schedule from "./Schedule";
 ---
-
-
-<div class="w-full bg-[linear-gradient(180deg,_#0A0E29_0%,_#201757_22.03%,_#7260DC_53.12%,_#F392DE_78.65%,_#FFF_100%);] h-[3868px]">
-
+<div class="w-full h-[3868px]">
 
 <About/>
+<Schedule/>
 <ExampleScreen/>
-<Freqaskquest client:load/>
+<FAQ client:load/>
 
-  
-</div>./freqaskquest.jsx
+</div>
