@@ -36,12 +36,15 @@ const faqData = [
 export default function frqaskquest () {
   
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [FAQDirection, setFAQDirection] = useState("left"); 
 
   const handlePrev = () => {
+    setFAQDirection("left");
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? faqData.length - 1 : prevIndex - 1));
   };
 
   const handleNext = () => {
+    setFAQDirection("right");
     setCurrentIndex((prevIndex) => (prevIndex === faqData.length - 1 ? 0 : prevIndex + 1));
   };
 
@@ -75,9 +78,8 @@ export default function frqaskquest () {
 
       <div className="mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
         <motion.div 
-        whileTap={{ scale: 0.9 }} 
         onClick={handlePrev} 
-        className="md:hidden flex cursor-pointer">
+        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
             <g filter="url(#filter0_d_317_547)">
               <path d="M11 2L3 8.5L11 15" stroke="#FFDAB9" strokeLinecap="round"/>
@@ -108,9 +110,9 @@ export default function frqaskquest () {
 
         <motion.div 
           key={currentIndex}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, x: FAQDirection === "right" ? 50 : -50  }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: FAQDirection === "right" ? -50 : 50 }}
           transition={{ duration: 0.5, transition: "easeIn" }}
           className="flex px-[10%] w-[300px] h-full md:hidden justify-center items-center gap-[85px] flex-row overflow-hidden">
             <div className="rounded-[26px] max-w-[250px] max-h-[221.787px] min-w-[250px] min-h-[221.787px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
@@ -124,9 +126,8 @@ export default function frqaskquest () {
         </motion.div>
 
         <motion.div 
-        whileTap={{ scale: 0.9 }}
         onClick={handleNext} 
-        className="md:hidden flex cursor-pointer">
+        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
             <g filter="url(#filter0_d_317_546)">
               <path d="M2 15L10 8.5L2 2" stroke="#FFDAB9" strokeLinecap="round"/>
