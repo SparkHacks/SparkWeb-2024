@@ -46,7 +46,7 @@ export default function frqaskquest () {
   };
 
   return (
-    <section className="w-full md:min-h-screen flex flex-col bg-stars-pattern" id="faq">
+    <section className="w-full md:min-h-screen flex flex-col bg-stars-pattern bg-[length:300px_300px] " id="faq">
       <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
 
         <div className="">
@@ -176,6 +176,7 @@ export default function frqaskquest () {
             src={cloud.src} alt="" className="absolute md:-left-[300px] -left-[90px]  top-[900px] md:w-[817px] md:h-[319px] w-[300px] h-[120px]"></motion.img>
           </div>
       </div>
+      
       
     </section>
   )

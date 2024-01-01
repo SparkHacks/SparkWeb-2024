@@ -52,7 +52,7 @@ export default function Headers() {
           closed: { y: '120%' },
         }}
         transition={{ duration: 2 }}
-        className={`lg:hidden fixed top-0 right-0 h-screen w-screen bg-[#0A0E29] text-white flex justify-center items-center`}
+        className={`lg:hidden fixed top-0 right-0 h-screen w-screen bg-[#0A0E29] bg-[url(https://media.giphy.com/media/JsbrhSE0FjxURIBRkX/giphy.gif)] bg-cover text-white flex justify-center items-center`}
       >
         <motion.div
         initial={{y: 0}}

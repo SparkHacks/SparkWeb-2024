@@ -93,6 +93,23 @@ export default function Sponsor(){
           )}
       
       </motion.div>
+      <div className='w-full h-full'>
+        <div className='absolute overflow-x-hidden w-full h-[250px]'>
+          <motion.img 
+          initial={{ x: 0 }}
+          whileInView={{  x: -2000 }}
+          transition={{ duration: 20 }}
+          viewport={{ once: true }}
+          src="/airplane.png" alt="" className="absolute w-[200px] opacity-60 -right-[190px]"/>
+
+          <motion.img 
+          initial={{ x: 0 }}
+          whileInView={{  x: 2000 }}
+          transition={{ duration: 20, delay: 1 }}
+          viewport={{ once: true }}
+          src="/helicopter.png" alt="" className="absolute w-[150px] -bottom-0 opacity-60 -left-[150px]"/>
+        </div>
+      </div>
     </section>
   )
 }

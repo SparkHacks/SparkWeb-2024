@@ -35,7 +35,7 @@ export default function Information() {
   const { days, hours, minutes, seconds } = useTimer("2024-02-09T12:00:00");
 
   return(
-    <section className="bg-stars-pattern w-full min-h-[300px] py-4 mb-20 flex lg:flex-row flex-col lg:gap-0 gap-[50px] overflow-x-hidden">
+    <section className="bg-stars-pattern w-full min-h-[300px] py-4 pb-20 flex lg:flex-row flex-col lg:gap-0 gap-[50px] overflow-x-hidden bg-[length:300px_300px] ">
       <motion.div
       initial={{  opacity: 0, x:-200 }}
       whileInView={{ opacity: 100, x:0 }}

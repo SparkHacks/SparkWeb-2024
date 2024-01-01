@@ -124,7 +124,7 @@ function ScheduleCard({ children }: { children: React.ReactNode }) {
 
 export default function Schedule() {
   return (
-    <section id="schedule" className="w-full min-h-screen bg-stars-pattern">
+    <section id="schedule" className="w-full min-h-screen bg-stars-pattern bg-[length:300px_300px] ">
       <StarHeader text="Schedule" />
 
       <div className="flex flex-wrap items-center justify-center gap-28 my-10">
