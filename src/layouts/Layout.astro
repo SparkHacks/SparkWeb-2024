@@ -22,7 +22,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-[linear-gradient(180deg,_#0A0E29_0%,_#201757_22.03%,_#7260DC_53.12%,_#F392DE_82.65%,_#FFF_100%);]">
+	<body class="bg-[linear-gradient(180deg,_#0A0E29_0%,_#0A0E29_21.45%,_#201757_41.63%,_#7260DC_61.73%,_#F392DE_83.26%,_#FFF_100%)]">
 		
 		<Header client:load/>
 			
@@ -32,7 +32,7 @@ const { title } = Astro.props;
 			<Skyline />
 		</div>
 		<div id="footer" class="bottom-0 left-0 h-full w-full bg-black text-white py-8 px-6 flex flex-col justify-between z-10">
-			<div class="flex md:flex-row flex-col gap-4 justify-around place-items-center w-full px-16">
+			<div class="flex md:flex-row flex-col md:gap-4 gap-16 justify-around place-items-center w-full px-16">
 				<img src="/logo-gray.png" class="w-24"/>
 				<div class="flex flex-col place-items-center">
 					<a class="font-semibold pb-1" href="/">SparkHacks 2024</a>
@@ -46,6 +46,9 @@ const { title } = Astro.props;
 						<img src="/linkedin.png" class="w-6"/>
 					</div>
 				</div>
+			</div>
+			<div class="flex w-full md:mt-4 mt-16 px-16 items-center justify-center text-center">
+				<span>Made with love ♥️</span>
 			</div>
 		</div>
 	</body>
