@@ -24,7 +24,7 @@ export default function Headers() {
     <div className=" h-20 w-full fixed z-30  overflow-hidden bg-[rgba(0,_0,_0,_0.25)]">
       <div className="py-4 px-6 backdrop-blur-md flex flex-row justify-between items-center">
         <div className="flex text-lg justify-center items-center">
-          <img className="w-[70px]" src={"/logo.png"}/>
+          <img className="w-[70px]" src={"/logo.gif"}/>
           <h1 className=" font-hyperhelix text-[#F9F5F6] text-2xl"> 2024</h1>
         </div>
         <div className="lg:hidden">
