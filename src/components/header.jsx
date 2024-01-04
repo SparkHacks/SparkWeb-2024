@@ -35,11 +35,11 @@ export default function Headers() {
           </button>
         </div>
         <div className="hidden lg:flex flex-row gap-[55px] text-[#F9F5F6] text-xl ">
-          <a href="/">Home</a>
-          <a href="#about">About</a>
-          <a href="#schedule">Schedule</a>
-          <a href="#faq">FAQ</a>
-          <a href="#sponsor">Sponsor</a>
+          <a href="/" className=" hover:text-[#FFCE6A]">Home</a>
+          <a href="#about" className=" hover:text-[#FFCE6A]">About</a>
+          <a href="#schedule" className=" hover:text-[#FFCE6A]">Schedule</a>
+          <a href="#faq" className=" hover:text-[#FFCE6A]">FAQ</a>
+          <a href="#sponsor" className=" hover:text-[#FFCE6A]">Sponsor</a>
         </div>
       </div>
 

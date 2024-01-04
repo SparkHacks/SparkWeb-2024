@@ -76,7 +76,7 @@ export default function frqaskquest () {
         text-3xl font-[500]">Frequently Asked Questions</h1>
       </div>
 
-      <div className="mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
+      <div className=" overflow-x-hidden mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
         <motion.div 
         onClick={handlePrev} 
         className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
@@ -99,7 +99,7 @@ export default function frqaskquest () {
           </svg>
         </motion.div>
 
-        <div className="hidden px-[10%] w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap  ">
+        <div className="hidden px-[10%] w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap overflow-x-hidden  ">
           {faqData.map((data) => 
             <div key={data.id} className=" rounded-[26px] w-[319px] h-[283px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
               <h1 className="text-[#FFDAB9] text-2xl  mt-4 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">{data.question}</h1>
