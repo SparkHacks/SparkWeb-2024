@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion  } from 'framer-motion';
 import cloud from "../assets/cloud1.png";
 
@@ -32,20 +32,24 @@ const faqData = [
 
 ];
 
+
 export default function frqaskquest () {
   
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [FAQDirection, setFAQDirection] = useState("left"); 
 
   const handlePrev = () => {
+    setFAQDirection("left");
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? faqData.length - 1 : prevIndex - 1));
   };
 
   const handleNext = () => {
+    setFAQDirection("right");
     setCurrentIndex((prevIndex) => (prevIndex === faqData.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col " id="FAQ">
+    <section className="w-full md:min-h-screen flex flex-col bg-stars-pattern bg-[length:300px_300px] " id="faq">
       <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
 
         <div className="">
@@ -72,11 +76,10 @@ export default function frqaskquest () {
         text-3xl font-[500]">Frequently Asked Questions</h1>
       </div>
 
-      <div className="mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
+      <div className=" overflow-x-hidden mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
         <motion.div 
-        whileTap={{ scale: 0.9 }} 
         onClick={handlePrev} 
-        className="md:hidden flex cursor-pointer">
+        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
             <g filter="url(#filter0_d_317_547)">
               <path d="M11 2L3 8.5L11 15" stroke="#FFDAB9" strokeLinecap="round"/>
@@ -96,7 +99,7 @@ export default function frqaskquest () {
           </svg>
         </motion.div>
 
-        <div className="hidden px-[10%] w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap  ">
+        <div className="hidden px-[10%] w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap overflow-x-hidden  ">
           {faqData.map((data) => 
             <div key={data.id} className=" rounded-[26px] w-[319px] h-[283px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
               <h1 className="text-[#FFDAB9] text-2xl  mt-4 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">{data.question}</h1>
@@ -107,9 +110,9 @@ export default function frqaskquest () {
 
         <motion.div 
           key={currentIndex}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, x: FAQDirection === "right" ? 50 : -50  }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: FAQDirection === "right" ? -50 : 50 }}
           transition={{ duration: 0.5, transition: "easeIn" }}
           className="flex px-[10%] w-[300px] h-full md:hidden justify-center items-center gap-[85px] flex-row overflow-hidden">
             <div className="rounded-[26px] max-w-[250px] max-h-[221.787px] min-w-[250px] min-h-[221.787px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
@@ -123,9 +126,8 @@ export default function frqaskquest () {
         </motion.div>
 
         <motion.div 
-        whileTap={{ scale: 0.9 }}
         onClick={handleNext} 
-        className="md:hidden flex cursor-pointer">
+        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
             <g filter="url(#filter0_d_317_546)">
               <path d="M2 15L10 8.5L2 2" stroke="#FFDAB9" strokeLinecap="round"/>
@@ -153,7 +155,7 @@ export default function frqaskquest () {
             initial={{  x: -200 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 2 }}
-            viewport={{ once: true, amount: .9  }}
+            viewport={{ once: true, amount: .8  }}
             src={cloud.src} alt="" className="absolute md:-right-[218px] -right-[80px] md:w-[817px] md:h-[319px] w-[300px] h-[120px] "></motion.img>
             <motion.img
             initial={{ x: 200 }}
@@ -175,6 +177,7 @@ export default function frqaskquest () {
             src={cloud.src} alt="" className="absolute md:-left-[300px] -left-[90px]  top-[900px] md:w-[817px] md:h-[319px] w-[300px] h-[120px]"></motion.img>
           </div>
       </div>
+      
       
     </section>
   )
