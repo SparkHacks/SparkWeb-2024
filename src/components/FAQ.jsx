@@ -49,7 +49,7 @@ export default function frqaskquest () {
   };
 
   return (
-    <section className="w-full md:min-h-screen flex flex-col bg-stars-pattern bg-[length:300px_300px] " id="faq">
+    <section className="w-full md:min-h-screen flex flex-col bg-[length:300px_300px] " id="faq">
       <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
 
         <div className="">
