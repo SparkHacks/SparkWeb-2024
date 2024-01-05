@@ -1,3 +1,7 @@
+# Credits: 
+
+Angel, Ciara, Fae, Flora, Hamza, Jelena, Kevin, Sam, Sera, Zi
+
 # Astro Starter Kit: Basics
 
 ```sh
