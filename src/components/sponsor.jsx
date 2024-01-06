@@ -1,19 +1,5 @@
 import { motion  } from 'framer-motion';
 
-const maequeeSponsor = {
-  animate: {
-    x: [0, -1400],
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "loop",
-        duration: 15,
-        ease: "linear",
-      }
-    }
-  }
-}
-
 const sponsors = [
   {
     name: "Discover",
@@ -35,8 +21,33 @@ const sponsors = [
     name: "Abbvie",
     image: "sponsorLogo/abbvielogo.png",
   },
+  {
+    name: "Publicis Sapient",
+    image: "sponsorLogo/publicissapientlogo.png",
+  },
+  {
+    name: "CME Group",
+    image: "sponsorLogo/cmegrouplogo.png",
+  },
 ]
 
+const sponsorLength = sponsors.length
+const logoWidth = 250
+const logoGap = 30
+
+const maequeeSponsor = {
+  animate: {
+    x: [0, -sponsorLength * (logoWidth + logoGap)],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 15,
+        ease: "linear",
+      }
+    }
+  }
+}
 
 export default function Sponsor(){
   return(
