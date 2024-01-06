@@ -10,7 +10,7 @@ export default {
         hyperhelix: ["HyperHelix", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        "stars-pattern": "url('sparkle-65.gif')",
+        "stars-pattern": "url('/sparkle-65.gif')",
       },
     },
   },
