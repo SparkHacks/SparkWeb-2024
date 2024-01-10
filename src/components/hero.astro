@@ -1,4 +1,4 @@
-<div class="w-full h-screen bg-stars-pattern pt-20 text-white overflow-x-hidden">
+<div class="w-full h-screen bg-stars-pattern pt-20 text-white">
   <!-- Main Hero -->
   <div class="h-5/6 order-first flex w-full align-middle">
     <div class="basis-1/3 ml-10 grid place-items-center">
@@ -15,9 +15,12 @@
       </div>
     </div>
 
-    <div class="basis-2/3 order-last  ml-10 grid place-items-center relative ">
-        <img src="/logo.png" class="logo w-full h-full object-cover z-10">
-        <img src="/orbit.png" class=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-x-150 scale-y-150">
+    <div class="basis-2/3 order-last ml-10 grid place-items-center relative">
+      <img src="/logo.png" class="logo w-full h-full object-cover z-10" />
+      <img
+        src="/orbit.png"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-x-150 scale-y-150"
+      />
     </div>
   </div>
 
@@ -81,8 +84,8 @@
   }
 
   .CTA-button .RSVP:hover {
-    background-color: rgba(255, 255, 255, 0.596); 
-    color: white; 
+    background-color: rgba(255, 255, 255, 0.596);
+    color: white;
     transform: scale(1.05);
   }
 
@@ -105,8 +108,13 @@
   }
 
   .logo {
-    height:auto;
-    overflow:auto;
+    height: auto;
+    overflow: auto;
   }
 
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
 </style>
