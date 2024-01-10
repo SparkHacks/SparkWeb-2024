@@ -1,5 +1,104 @@
-<div class="w-full h-screen flex place-items-center justify-center bg-stars-pattern bg-[length:300px_300px] bg-[#0A0E29] pt-[77px] text-white">
-  <div>
-    kevin is still making the hero section 😒, scroll down...
+<div class="w-full h-screen bg-stars-pattern pt-20 text-white">
+  <!-- Main Hero -->
+  <div class="h-5/6 flex w-full align-middle">
+    <div class="basis-2/5 ml-10 grid place-items-center">
+      <div>
+        <div class="font-hyperhelix text-white text-7xl">
+          <h1>Sparkhacks</h1>
+          <h1>2024</h1>
+        </div>
+
+        <div class="CTA-button">
+          <button class="RSVP w-44 font-poppin font-bold"> RSVP</button>
+          <button class="Info w-44 font-poppin font-bold"> Information</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="basis-3/5 "></div>
+  </div>
+
+  <!-- Scroll Menu -->
+  <div class="h-1/6 items-center justify-center w-full">
+    <div class="flex w-full justify-center items-center pt-3">
+      <img src="/mouse.svg" class="h-12" />
+    </div>
+
+    <div class="flex w-full justify-center items-center">
+      <h1 class="text-xl font-[500]">Scroll down</h1>
+    </div>
+
+    <div class="flex w-full justify-center items-center pt-4">
+      <img src="/arrow.svg" class="h-7.5 object" />
+    </div>
   </div>
 </div>
+
+<style>
+  .object {
+    -webkit-animation: action 1s infinite alternate;
+    animation: action 1s infinite alternate;
+  }
+
+  @-webkit-keyframes action {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes action {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* button stuff */
+  .CTA-button button {
+    border: 0;
+    background-color: transparent;
+    color: black;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    border-radius: 5rem;
+    margin-top: 1rem;
+  }
+
+  .CTA-button .RSVP {
+    background-color: white;
+    color: black;
+    margin-right: 1.25rem;
+  }
+
+  .CTA-button .RSVP:hover {
+    background-color: rgba(255, 255, 255, 0.596); 
+    color: white; 
+    transform: scale(1.05);
+  }
+
+  .CTA-button .RSVP:active {
+    transform: scale(0.95);
+  }
+
+  .CTA-button .Info {
+    color: white;
+    border: 1px white solid;
+  }
+
+  .CTA-button .Info:hover {
+    color: black;
+    background-color: white;
+  }
+
+  .CTA-button .Info:active {
+    transform: scale(0.95);
+  }
+
+</style>
