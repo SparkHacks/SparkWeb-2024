@@ -1,14 +1,14 @@
 <div class="w-full h-screen bg-stars-pattern pt-20 text-white">
   <!-- Main Hero -->
   <div class="CTA h-5/6 order-first flex w-full align-middle">
-    <div class="basis-1/3 ml-10 grid place-items-center">
+    <div class="basis-1/3 md:ml-10 ml-0 grid place-items-center">
       <div>
-        <div class="font-hyperhelix text-white text-7xl">
+        <div class="font-hyperhelix text-white md:text-7xl text-5xl">
           <h1>Sparkhacks</h1>
           <h1>2024</h1>
         </div>
 
-        <div class="CTA-button">
+        <div class="CTA-button flex lg:justify-start justify-center items-center md:flex-row flex-col gap-4 mt-4">
           <button class="RSVP w-44 font-poppin font-bold"> RSVP</button>
           <button class="Info w-44 font-poppin font-bold"> Information</button>
         </div>
@@ -18,8 +18,8 @@
     <div class="logo-div basis-2/3 order-last ml-10 grid place-items-center relative">
       <img src="/logo.png" class="logo w-full h-full object-cover z-10" />
       <img
-        src="/orbit.png"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-x-150 scale-y-150"
+        src="/orbit.gif"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-x-150 scale-y-150 opacity-25"
       />
     </div>
   </div>
@@ -74,13 +74,11 @@
     cursor: pointer;
     transition: background-color 0.2s linear;
     border-radius: 5rem;
-    margin-top: 1rem;
   }
 
   .CTA-button .RSVP {
     background-color: white;
     color: black;
-    margin-right: 1.25rem;
   }
 
   .CTA-button .RSVP:hover {
@@ -118,7 +116,7 @@
     padding: 0;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     .logo-div {
       display: none;
     }
