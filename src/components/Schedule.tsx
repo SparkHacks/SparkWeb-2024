@@ -162,10 +162,11 @@ export default function Schedule() {
   return (
     <section id="schedule" className="w-full min-h-screen bg-stars-pattern bg-[length:300px_300px] "> 
       <div className="flex flex-col items-center justify-center mt-10 mb-10">
-      <StarHeader text="Pre Hack Workshops" />
+      <StarHeader text="Pre-Hack Workshops" />
         <div className="flex flex-wrap items-center justify-center mt-12 gap-10">
         {preWorkshop.map((day, i) => (
-          <WorkshopCard key={i}>
+          <WorkshopCard 
+          key={i}>
             <img src={day.image} alt="" className="w-20 h-20 rounded-full object-contain brightness-0 invert" />
             <h1 className="text-3xl font-poppin font-[500]">{day.date}</h1>
             <h1 className="text-2xl font-poppin font-[500] ">{day.time}</h1>
