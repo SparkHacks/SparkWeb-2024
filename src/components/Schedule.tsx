@@ -114,6 +114,33 @@ const schedulingData = [
   },
 ];
 
+const preWorkshop = [
+  {
+    date: "February 5th",
+    time: "5:00 pm - 6:30 pm",
+    description: "Git Yourself Together (Intro to Git and Version Control)",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
+  },
+  {
+    date: "February 6th",
+    time: "5:00 pm - 6:30 pm",
+    description: "Intro to React.js and Tailwind CSS",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    date: "February 7th",
+    time: "5:00 pm - 6:30 pm",
+    description: "Intro to Google Firebase (Backend)",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  },
+  {
+    date: "February 8th",
+    time: "5:00 pm - 6:30 pm",
+    description: "Team Formation + Social",
+    image: "https://icons.veryicon.com/png/o/miscellaneous/site-icon-library/team-28.png",
+  },
+]
+
 function ScheduleCard({ children }: { children: React.ReactNode }) {
   return (
     <div className="rounded-[26px] w-[500px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col p-6 text-white font-poppin">
@@ -122,9 +149,33 @@ function ScheduleCard({ children }: { children: React.ReactNode }) {
   );
 }
 
+function WorkshopCard({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="rounded-[26px] w-[300px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col p-6 text-white font-poppin justify-center items-center gap-4 text-center h-[300px]">
+      {children}
+    </div>
+  );
+}
+
+
 export default function Schedule() {
   return (
-    <section id="schedule" className="w-full min-h-screen bg-stars-pattern bg-[length:300px_300px] ">
+    <section id="schedule" className="w-full min-h-screen bg-stars-pattern bg-[length:300px_300px] "> 
+      <div className="flex flex-col items-center justify-center mt-10 mb-10">
+      <StarHeader text="Pre-Hack Workshops" />
+        <div className="flex flex-wrap items-center justify-center mt-12 gap-10">
+        {preWorkshop.map((day, i) => (
+          <WorkshopCard 
+          key={i}>
+            <img src={day.image} alt="" className="w-20 h-20 rounded-full object-contain brightness-0 invert" />
+            <h1 className="text-3xl font-poppin font-[500]">{day.date}</h1>
+            <h1 className="text-2xl font-poppin font-[500] ">{day.time}</h1>
+            <p className="text-lg font-poppin">{day.description}</p>
+          </WorkshopCard>
+        ))}
+      </div>
+      </div>
+
       <StarHeader text="Schedule" />
 
       <div className="flex flex-wrap items-center justify-center gap-28 my-10">

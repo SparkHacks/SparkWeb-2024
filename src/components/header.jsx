@@ -23,10 +23,10 @@ export default function Headers() {
   return (
     <div className=" h-20 w-full fixed z-30  overflow-hidden bg-[rgba(0,_0,_0,_0.25)]">
       <div className="py-4 px-6 backdrop-blur-md flex flex-row justify-between items-center">
-        <div className="flex text-lg justify-center items-center">
+        <a href='/' className="flex text-lg justify-center items-center cursor-pointer">
           <img className="w-[70px]" src={"/logo.gif"}/>
           <h1 className=" font-hyperhelix text-[#F9F5F6] text-2xl"> 2024</h1>
-        </div>
+        </a>
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
@@ -56,7 +56,7 @@ export default function Headers() {
       >
         <motion.div
         initial={{y: 0}}
-        whileInView={{y:-290}}
+        whileInView={{y:-650}}
         transition={{ duration: 2 }}
         className={`absolute -tsop-36  ${isMenuOpen ? 'block ' : 'hidden '}`}>
           <img src={Rockets.src} className="w-[500px] h-[500px]"></img>
