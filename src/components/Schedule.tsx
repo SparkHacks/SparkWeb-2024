@@ -1,114 +1,91 @@
-// this should be put into its own component file
-function StarHeader({ text }: { text: string }) {
-  return (
-    <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
-      <div className="">
-        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="61" viewBox="0 0 68 61" fill="none">
-          <g filter="url(#filter0_d_310_489)">
-            <path
-              d="M23.7944 17.5942C23.7944 17.5942 25.7095 4.76448 31.2475 4.02969C36.7856 3.29489 42.8211 16.4443 42.8211 16.4443C42.8211 16.4443 61.2957 13.8308 63.2696 17.5942C65.1794 21.2353 48.3043 31.0638 48.3043 31.0638C48.3043 31.0638 62.3386 45.5617 56.6349 50.2974C51.4807 54.5769 37.7765 41.9052 37.7765 41.9052C37.7765 41.9052 27.5739 57.744 21.5972 56.0466C15.3464 54.2714 23.0267 34.0205 23.0267 34.0205C23.0267 34.0205 4 30.531 4 24.9861C4 20.5656 23.7944 17.5942 23.7944 17.5942Z"
-              fill="#FFCE6A"
-            />
-          </g>
-          <defs>
-            <filter id="filter0_d_310_489" x="0" y="0" width="67.4199" height="60.1738" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-              <feOffset />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.807843 0 0 0 0 0.415686 0 0 0 1 0" />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_310_489" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_310_489" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-      </div>
-
-      <h1
-        className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin lg:text-[50px] 
-        text-3xl font-[500]"
-      >
-        {text}
-      </h1>
-    </div>
-  );
-}
+import StarHeader from "./StarHeader.tsx";
 
 const schedulingData = [
   {
-    date: "February 16th",
-    day: "Tuesday",
+    date: "February 9th",
+    day: "Friday",
     events: [
       {
-        time: "2:45pm",
-        title: "Check In",
+        time: "2:30 pm - 3:30 pm",
+        title: "Check-In and Career Fair",
       },
       {
-        time: "3:30pm",
-        title: "Opening Remarks",
+        time: "3:30 pm - 4:00 pm",
+        title: "Opening Ceremony and Releasing Tracks & Prompts",
       },
       {
-        time: "4:00pm",
-        title: "Introduction to Git and GitHub",
+        time: "4:00 pm - 5:00 pm",
+        title: "‘Creating a Basic Web App’ Workshop with John Deere",
       },
       {
-        time: "5:00pm",
-        title: "Continuous Deployment of Cloud Native Applications",
+        time: "4:00 pm - 5:30 pm",
+        title: "Brainstorm Project Ideas with Mentors",
       },
       {
-        time: "6:00pm",
-        title: "Introduction to App Development with React Native",
+        time: "5:00 pm - 6:30 pm",
+        title: "‘How to Host your Hack Project using AWS’ with Discover",
       },
       {
-        time: "6:00pm",
-        title: "Introduction to Web Development with React",
+        time: "5:00 pm - 6:00 pm",
+        title: "Resume Review with CAT",
       },
       {
-        time: "7:00pm",
-        title: "Dinner Social",
+        time: "6:00 pm - 7:00 pm",
+        title: "‘How to Use ChatGPT as your Backend’ with CAT",
       },
       {
-        time: "9:00pm",
-        title: "End of Day 1",
+        time: "6:00 pm - 7:00 pm",
+        title: "Interviewing Tips and Tricks from Abbvie",
+      },
+      {
+        time: "7:00 pm - 8:00 pm",
+        title: "Dinner",
+      },
+      {
+        time: "8:00 pm - 9:00 pm",
+        title: "Mario Kart Tournament with Insomnia Cookies",
       },
     ],
   },
   {
-    date: "February 17th",
-    day: "Wednesday",
+    date: "February 10th",
+    day: "Saturday",
     events: [
       {
-        time: "2:45pm",
-        title: "Check In",
+        time: "9:00 am - 10:00 am",
+        title: "Check-In and Breakfast",
       },
       {
-        time: "3:30pm",
-        title: "Opening Remarks",
+        time: "12:00 pm - 1:00 pm",
+        title: "Destress Social with Anime",
       },
       {
-        time: "4:00pm",
-        title: "Introduction to Git and GitHub",
+        time: "1:00 pm - 2:00 pm",
+        title: "Lunch",
       },
       {
-        time: "5:00pm",
-        title: "Continuous Deployment of Cloud Native Applications",
+        time: "2:30 pm - 3:00 pm",
+        title: "How to Submit your Project: DevPost 101",
       },
       {
-        time: "6:00pm",
-        title: "Introduction to App Development with React Native",
+        time: "4:00 pm",
+        title: "Project Submission Deadline",
       },
       {
-        time: "6:00pm",
-        title: "Introduction to Web Development with React",
+        time: "4:15 pm - 5:15 pm",
+        title: "Project Expo",
       },
       {
-        time: "7:00pm",
-        title: "Dinner Social",
+        time: "5:30 pm - 6:00 pm",
+        title: "Meet your Organizers & SparkHacks 2025",
       },
       {
-        time: "9:00pm",
-        title: "End of Day 1",
+        time: "6:00 pm - 7:00 pm",
+        title: "Announcement of Winners & Closing Ceremony",
+      },
+      {
+        time: "7:00 pm - 8:00 pm",
+        title: "Dinner",
       },
     ],
   },
@@ -176,9 +153,9 @@ export default function Schedule() {
       </div>
       </div>
 
-      <StarHeader text="Schedule" />
+      <StarHeader text="Schedule"/>
 
-      <div className="flex flex-wrap items-center justify-center gap-28 my-10">
+      <div className="flex flex-wrap justify-center gap-28 my-10">
         {schedulingData.map((day, i) => (
           <ScheduleCard key={i}>
             <h1 className="text-3xl font-[500]">{day.date}</h1>
@@ -186,7 +163,7 @@ export default function Schedule() {
             <div className="flex flex-col gap-5">
               {day.events.map((event, j) => (
                 <p className="text-lg" key={j}>
-                  {event.time} - {event.title}
+                  <span className=" font-extrabold">{event.time}</span> | {event.title}
                 </p>
               ))}
             </div>
