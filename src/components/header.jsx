@@ -35,11 +35,11 @@ export default function Headers() {
           </button>
         </div>
         <div className="hidden lg:flex flex-row gap-[55px] text-[#F9F5F6] text-xl ">
-          <a href="/" className=" hover:text-[#FFCE6A]">Home</a>
           <a href="#about" className=" hover:text-[#FFCE6A]">About</a>
           <a href="#schedule" className=" hover:text-[#FFCE6A]">Schedule</a>
           <a href="#faq" className=" hover:text-[#FFCE6A]">FAQ</a>
-          <a href="#sponsor" className=" hover:text-[#FFCE6A]">Sponsor</a>
+          <a href="#sponsor" className=" hover:text-[#FFCE6A]">Sponsors</a>
+          <a href="https://forms.gle/fuwaN1UBrd5zC2hEA" target='_blank' className=" hover:text-[#FFCE6A]">Apply</a>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ export default function Headers() {
       >
         <motion.div
         initial={{y: 0}}
-        whileInView={{y:-650}}
+        whileInView={{y: '-150%'}}
         transition={{ duration: 2 }}
         className={`absolute -tsop-36  ${isMenuOpen ? 'block ' : 'hidden '}`}>
           <img src={Rockets.src} className="w-[500px] h-[500px]"></img>
@@ -139,7 +139,7 @@ export default function Headers() {
             <div className='invert w-[30px] h-[30px]'>
               <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
             </div>
-            <h1>Sponsor</h1>
+            <h1>Sponsors</h1>
           </motion.a>
 
           <motion.button
