@@ -4,12 +4,14 @@ import Information from "./information.jsx"
 import FAQ from "./FAQ.jsx";
 import About from "./About.astro";
 import Schedule from "./Schedule";
+import Team from "./Team.jsx";
 ---
 <div class="w-full min-h-full ">
   <About/>
   <Information client:load/>
   <Schedule/>
   <FAQ client:load/>
+  <!-- <Team client:load/> -->
   <Sponsor client:load/>
 
   <img src="/sparkle-65.gif" width="0px" height="0px" />

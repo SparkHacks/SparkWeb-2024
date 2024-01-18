@@ -35,11 +35,11 @@ export default function Headers() {
           </button>
         </div>
         <div className="hidden lg:flex flex-row gap-[55px] text-[#F9F5F6] text-xl ">
-          <a href="/" className=" hover:text-[#FFCE6A]">Home</a>
           <a href="#about" className=" hover:text-[#FFCE6A]">About</a>
           <a href="#schedule" className=" hover:text-[#FFCE6A]">Schedule</a>
           <a href="#faq" className=" hover:text-[#FFCE6A]">FAQ</a>
-          <a href="#sponsor" className=" hover:text-[#FFCE6A]">Sponsor</a>
+          <a href="#sponsor" className=" hover:text-[#FFCE6A]">Sponsors</a>
+          <a href="https://forms.gle/fuwaN1UBrd5zC2hEA" target='_blank' className=" hover:text-[#FFCE6A]">Apply</a>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ export default function Headers() {
       >
         <motion.div
         initial={{y: 0}}
-        whileInView={{y:-650}}
+        whileInView={{y: '-150%'}}
         transition={{ duration: 2 }}
         className={`absolute -tsop-36  ${isMenuOpen ? 'block ' : 'hidden '}`}>
           <img src={Rockets.src} className="w-[500px] h-[500px]"></img>
@@ -74,21 +74,6 @@ export default function Headers() {
               <img className="w-[100px] h-auto brightness-0 invert" src={"/logo.png"}/>
               <h1>SparkHacks 2024</h1>
           </motion.span>
-
-          <motion.a 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          whileHover={{ scale: 1.2 }}
-          
-          href="/" onClick={toggleMenu} className="text-[30px] font-poppin mb-6 flex flex-row gap-2 justify-center items-center">
-            <div className='invert'>
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
-                <path d="M 25 1.0507812 C 24.7825 1.0507812 24.565859 1.1197656 24.380859 1.2597656 L 1.3808594 19.210938 C 0.95085938 19.550938 0.8709375 20.179141 1.2109375 20.619141 C 1.5509375 21.049141 2.1791406 21.129062 2.6191406 20.789062 L 4 19.710938 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.710938 L 47.380859 20.789062 C 47.570859 20.929063 47.78 21 48 21 C 48.3 21 48.589063 20.869141 48.789062 20.619141 C 49.129063 20.179141 49.049141 19.550938 48.619141 19.210938 L 25.619141 1.2597656 C 25.434141 1.1197656 25.2175 1.0507812 25 1.0507812 z M 35 5 L 35 6.0507812 L 41 10.730469 L 41 5 L 35 5 z"></path>
-              </svg>
-            </div>
-            <h1>Home</h1>
-          </motion.a>
 
           <motion.a 
           initial={{ opacity: 0, y: 50 }}
@@ -139,7 +124,20 @@ export default function Headers() {
             <div className='invert w-[30px] h-[30px]'>
               <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path></g></svg>
             </div>
-            <h1>Sponsor</h1>
+            <h1>Sponsors</h1>
+          </motion.a>
+
+          <motion.a 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          whileHover={{ scale: 1.2 }}
+          
+          href="https://forms.gle/fuwaN1UBrd5zC2hEA" target='_blank' onClick={toggleMenu} className="text-[30px] font-poppin mb-6 flex flex-row gap-2 justify-center items-center">
+            <div className='invert w-[30px] h-[30px]'>
+              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g fill="none" fillRule="evenodd" id="" stroke="none" strokeLinecap="round" strokeWidth="1"> <g id="" stroke="#212121" strokeWidth="1.5" transform="translate(-103.000000, -334.000000)"> <g id="" transform="translate(103.000000, 334.000000)"> <g id="" transform="translate(4.000000, 2.000000)"> <path d="M16,14.5 L16,19 C16,19.5523 15.5523,20 15,20 L11.75,20" strokeLinejoin="round"></path> <path d="M16,6 L16,1 C16,0.447715 15.5523,0 15,0 L1,0 C0.447715,0 0,0.447715 0,1 L0,19 C0,19.5523 0.447715,20 1,20 L4,20" strokeLinejoin="round"></path> <line x1="4" x2="11" y1="6" y2="6"></line> <line x1="7.5" x2="16" y1="20" y2="9.5"></line> <line x1="4" x2="8" y1="10" y2="10"></line> </g> </g> </g> </g> </g></svg>
+            </div>
+            <h1>Apply</h1>
           </motion.a>
 
           <motion.button

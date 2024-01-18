@@ -2,32 +2,67 @@
 import { useState } from 'react';
 import { motion  } from 'framer-motion';
 import cloud from "../assets/cloud1.png";
+import StarHeader from "./StarHeader.tsx";
 
 const faqData = [
   { 
     id: 1,
-    question: "How do I participate?", 
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at sapien ultrices, dictum erat vel, ultrices ligula. " 
+    question: "Who can participate?", 
+    answer: "SparkHacks is open to anyone! Whether you're a freshman with no coding experience or a senior with a keen interest in technology, you are welcome to join. We encourage diversity and a mix of skills to create a dynamic and enriching experience for all participants." 
   },
   { 
     id: 2,
-    question: "Who is allowed to attend?", 
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at sapien ultrices, dictum erat vel, ultrices ligula. " 
-  },
+    question: "What is the deadline to apply for SparkHacks?", 
+    answer: "There is no deadline to apply but we will be accepting applications on a rolling basis and will close registrations once we hit a certain threshold. Please apply as soon as possible since we only have a limited number of spots available! Encourage the rest of your team to apply as soon as possible as well."},
   { 
     id: 3,
-    question: "How can I stay updated with the event?", 
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at sapien ultrices, dictum erat vel, ultrices ligula. " 
+    question: "Is SparkHacks overnight?", 
+    answer: "Unfortunately, at this time we cannot offer an overnight Hackathon experience. You are welcome to continue hacking at home within the hacking period but we cannot provide facilities for sleeping on campus." 
   },
   { 
     id: 4,
-    question: "When and where will the event be located?", 
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at sapien ultrices, dictum erat vel, ultrices ligula. " 
+    question: "How are projects judged, and what is the criteria?", 
+    answer: "The Judging Criteria will be available within the HackPack. A panel of experienced judges from the industry along with faculty will evaluate the projects and determine the winners." 
   },
   { 
     id: 5,
-    question: "Will it be free?", 
-    answer: "Yes! SparkHacks will always be free." 
+    question: "What if I don’t want to code?", 
+    answer: "No problem! We have a No-Code track where you can take one of our prompts and implement it using Figma!" 
+  },
+  { 
+    id: 6,
+    question: "Do I need a team to participate in SparkHacks?", 
+    answer: "No, you can participate individually or in teams of up to 5 members. We will be having a Team Formation Social to help you find potential teammates!" 
+  },
+  { 
+    id: 7,
+    question: "Can I start working on my project before SparkHacks begins?", 
+    answer: "No, all projects must be started and developed during SparkHacks. Participants are expected to attend the opening session to learn of the tracks and corresponding prompts." 
+  },
+  { 
+    id: 8,
+    question: "Where can I find SparkHacks resources?", 
+    answer: "All SparkHacks resources, including guidelines, workshops, resources to help you best prepare, and other relevant information, will be available in the HackPack from February 5th onwards." 
+  },
+  { 
+    id: 9,
+    question: "How to find support during the hackathon?", 
+    answer: "Mentors will be available throughout SparkHacks in person as well as through Discord to provide guidance, answer questions, and assist participants with technical challenges. You can reach out to a mentor at any time during SparkHacks!" 
+  },
+  { 
+    id: 10,
+    question: "How can I submit my project?", 
+    answer: "All submissions will be made through Devpost which is also how we will be keeping track of teams. There will be a session to familiarize yourself with how to submit your project through Devpost during the hackathon." 
+  },
+  { 
+    id: 11,
+    question: "What prizes are available for winners?", 
+    answer: "Prizes may vary, but typically winners will receive recognition as well as valuable tech gadgets. Prizes are track-specific and the list of prizes can be found in the HackPack." 
+  },
+  { 
+    id: 12,
+    question: "Whom should I contact if I have questions?", 
+    answer: "You can reach out to the Exec Team through sparkhacks@uic.edu, or on Instagram @sparkhacksuic or LinkedIn - SparkHacks" 
   },
 
 ];
@@ -50,36 +85,12 @@ export default function frqaskquest () {
 
   return (
     <section className="w-full md:min-h-screen flex flex-col bg-[length:300px_300px] " id="faq">
-      <div className="w-full flex justify-center items-center md:flex-row flex-col gap-5 h-full z-[1]">
-
-        <div className="">
-        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="61" viewBox="0 0 68 61" fill="none">
-          <g filter="url(#filter0_d_310_489)">
-            <path d="M23.7944 17.5942C23.7944 17.5942 25.7095 4.76448 31.2475 4.02969C36.7856 3.29489 42.8211 16.4443 42.8211 16.4443C42.8211 16.4443 61.2957 13.8308 63.2696 17.5942C65.1794 21.2353 48.3043 31.0638 48.3043 31.0638C48.3043 31.0638 62.3386 45.5617 56.6349 50.2974C51.4807 54.5769 37.7765 41.9052 37.7765 41.9052C37.7765 41.9052 27.5739 57.744 21.5972 56.0466C15.3464 54.2714 23.0267 34.0205 23.0267 34.0205C23.0267 34.0205 4 30.531 4 24.9861C4 20.5656 23.7944 17.5942 23.7944 17.5942Z" fill="#FFCE6A"/>
-          </g>
-          <defs>
-            <filter id="filter0_d_310_489" x="0" y="0" width="67.4199" height="60.1738" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset/>
-              <feGaussianBlur stdDeviation="2"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.807843 0 0 0 0 0.415686 0 0 0 1 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_310_489"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_310_489" result="shape"/>
-            </filter>
-          </defs>
-        </svg>
-        </div>
-
-        <h1 className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin lg:text-[50px] 
-        text-3xl font-[500]">Frequently Asked Questions</h1>
-      </div>
+      <StarHeader text="Frequently Asked Questions" />
 
       <div className=" overflow-x-hidden mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
         <motion.div 
         onClick={handlePrev} 
-        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
+        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9] mr-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
             <g filter="url(#filter0_d_317_547)">
               <path d="M11 2L3 8.5L11 15" stroke="#FFDAB9" strokeLinecap="round"/>
@@ -99,9 +110,9 @@ export default function frqaskquest () {
           </svg>
         </motion.div>
 
-        <div className="hidden px-[10%] w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap overflow-x-hidden  ">
+        <div className="hidden w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap overflow-x-hidden  ">
           {faqData.map((data) => 
-            <div key={data.id} className=" rounded-[26px] w-[319px] h-[283px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
+            <div key={data.id} className=" rounded-[26px] w-[380px] h-[380px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
               <h1 className="text-[#FFDAB9] text-2xl  mt-4 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">{data.question}</h1>
               <p className="text-[#FFDAB9] text-lg  mt-3 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">{data.answer}</p>
             </div>
@@ -114,8 +125,8 @@ export default function frqaskquest () {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: FAQDirection === "right" ? -50 : 50 }}
           transition={{ duration: 0.5, transition: "easeIn" }}
-          className="flex px-[10%] w-[300px] h-full md:hidden justify-center items-center gap-[85px] flex-row overflow-hidden">
-            <div className="rounded-[26px] max-w-[250px] max-h-[221.787px] min-w-[250px] min-h-[221.787px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
+          className="flex px-[2%] w-[290px] h-[290px] md:hidden justify-center items-center gap-[85px] flex-row overflow-hidden">
+            <div className="rounded-[26px] w-[290px] h-[290px] min-w-[290px] min-h-[290px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col px-3">
               <h1 className="text-[#FFDAB9] text-[18px] mt-4 font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">
                 {faqData[currentIndex].question}
               </h1>
@@ -127,7 +138,7 @@ export default function frqaskquest () {
 
         <motion.div 
         onClick={handleNext} 
-        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9]">
+        className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9] ml-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
             <g filter="url(#filter0_d_317_546)">
               <path d="M2 15L10 8.5L2 2" stroke="#FFDAB9" strokeLinecap="round"/>
