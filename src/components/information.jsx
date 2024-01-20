@@ -84,7 +84,7 @@ export default function Information() {
           text-3xl font-[500]">Resources</h1>
           <h1 className=" animate-bounce lg:text-[50px] text-3xl">‍💼</h1>
         </div>
-        <a href="/" target="_blank" className="mt-5 shadow-[0px_0px_4px_0px_#FFDAB9] rounded-[26.812px] border-4 border-solid border-[#FFDAB9] backdrop-blur-[19.5px] h-[100px] w-[300px] flex justify-center items-center flex-col ">
+        <a target="_blank" className="mt-5 shadow-[0px_0px_4px_0px_#FFDAB9] rounded-[26.812px] border-4 border-solid border-[#FFDAB9] backdrop-blur-[19.5px] h-[100px] w-[300px] flex justify-center items-center flex-col cursor-pointer">
           <h1 className="text-[#FFDAB9] text-md font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">Click to view</h1>
           <h1 className="text-[#FFDAB9] text-2xl font-poppin drop-shadow-[0px_0px_4px_#FFCE6A]">Hack Pack</h1>
         </a>

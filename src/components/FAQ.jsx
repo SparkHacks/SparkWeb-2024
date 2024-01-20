@@ -90,24 +90,28 @@ export default function frqaskquest () {
       <div className=" overflow-x-hidden mt-[65px] z-[1] w-full h-full flex justify-center items-center md:flex-none flex-row">
         <motion.div 
         onClick={handlePrev} 
+        whileTap={{ scale: 0.7 }}
+
         className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9] mr-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
-            <g filter="url(#filter0_d_317_547)">
-              <path d="M11 2L3 8.5L11 15" stroke="#FFDAB9" strokeLinecap="round"/>
-            </g>
-            <defs>
-              <filter id="filter0_d_317_547" x="0.837168" y="0.130137" width="12.0327" height="16.7397" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset/>
-                <feGaussianBlur stdDeviation="0.684931"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.807843 0 0 0 0 0.415686 0 0 0 1 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_317_547"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_317_547" result="shape"/>
-              </filter>
-            </defs>
-          </svg>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
+              <g filter="url(#filter0_d_317_547)">
+                <path d="M11 2L3 8.5L11 15" stroke="#FFDAB9" strokeLinecap="round"/>
+              </g>
+              <defs>
+                <filter id="filter0_d_317_547" x="0.837168" y="0.130137" width="12.0327" height="16.7397" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset/>
+                  <feGaussianBlur stdDeviation="0.684931"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.807843 0 0 0 0 0.415686 0 0 0 1 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_317_547"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_317_547" result="shape"/>
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </motion.div>
 
         <div className="hidden w-full h-full md:flex justify-center items-center gap-[85px] flex-wrap overflow-x-hidden  ">
@@ -121,7 +125,7 @@ export default function frqaskquest () {
 
         <motion.div 
           key={currentIndex}
-          initial={{ opacity: 0, x: FAQDirection === "right" ? 50 : -50  }}
+          initial={{ opacity: 0, x: FAQDirection === "right" ? 50 : -50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: FAQDirection === "right" ? -50 : 50 }}
           transition={{ duration: 0.5, transition: "easeIn" }}
@@ -138,24 +142,27 @@ export default function frqaskquest () {
 
         <motion.div 
         onClick={handleNext} 
+        whileTap={{ scale: 0.7 }}
         className="md:hidden flex cursor-pointer border-2 rounded-full w-[30px] h-[30px] justify-center items-center border-[#FFDAB9] ml-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
-            <g filter="url(#filter0_d_317_546)">
-              <path d="M2 15L10 8.5L2 2" stroke="#FFDAB9" strokeLinecap="round"/>
-            </g>
-            <defs>
-              <filter id="filter0_d_317_546" x="0.130137" y="0.130137" width="12.0327" height="16.7397" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset/>
-                <feGaussianBlur stdDeviation="0.684931"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.807843 0 0 0 0 0.415686 0 0 0 1 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_317_546"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_317_546" result="shape"/>
-              </filter>
-            </defs>
-          </svg>
+          <div className='ml-1'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
+              <g filter="url(#filter0_d_317_546)">
+                <path d="M2 15L10 8.5L2 2" stroke="#FFDAB9" strokeLinecap="round"/>
+              </g>
+              <defs>
+                <filter id="filter0_d_317_546" x="0.130137" y="0.130137" width="12.0327" height="16.7397" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset/>
+                  <feGaussianBlur stdDeviation="0.684931"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.807843 0 0 0 0 0.415686 0 0 0 1 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_317_546"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_317_546" result="shape"/>
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </motion.div>
 
       </div>
