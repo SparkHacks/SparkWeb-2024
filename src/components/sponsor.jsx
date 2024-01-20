@@ -61,7 +61,7 @@ const maequeeSponsor = {
 export default function Sponsor(){
   return(
     <section className="w-full flex flex-col overflow-x-hidden" id="sponsor">
-      <StarHeader text="Sponsor"/>
+      <StarHeader text="Sponsors"/>
       <motion.div
       variants={maequeeSponsor}
       animate="animate"
