@@ -18,6 +18,10 @@ const schedulingData = [
         title: "‘Creating a Basic Web App’ Workshop with John Deere",
       },
       {
+        time: "4:00 pm - 5:00 pm",
+        title: "Resume Review Workshop with CAT",
+      },
+      {
         time: "4:00 pm - 5:30 pm",
         title: "Brainstorm Project Ideas with Mentors",
       },
@@ -27,15 +31,11 @@ const schedulingData = [
       },
       {
         time: "5:00 pm - 6:00 pm",
-        title: "Resume Review with CAT",
-      },
-      {
-        time: "6:00 pm - 7:00 pm",
-        title: "‘How to Use ChatGPT as your Backend’ with CAT",
-      },
-      {
-        time: "6:00 pm - 7:00 pm",
         title: "Interviewing Tips and Tricks from Abbvie",
+      },
+      {
+        time: "6:00 pm - 7:00 pm",
+        title: "Intro to API Workshop with CAT",
       },
       {
         time: "7:00 pm - 8:00 pm",
