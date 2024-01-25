@@ -18,7 +18,7 @@ const schedulingData = [
         title: "‘Creating a Basic Web App’ Workshop with John Deere",
       },
       {
-        time: "4:00 pm - 5:30 pm",
+        time: "4:00 pm - 5:00 pm",
         title: "Resume Review Workshop with CAT",
       },
       {
