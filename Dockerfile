@@ -2,7 +2,7 @@ FROM node:lts AS runtime
 
 LABEL "org.opencontainers.image.source"="https://github.com/sparkhacks/sparkweb"
 LABEL "org.opencontainers.image.title"="sparkweb"
-LABEL "org.opencontainers.imae.url"="https://github.com/sparkhacks/sparkweb"
+LABEL "org.opencontainers.image.url"="https://github.com/sparkhacks/sparkweb"
 
 WORKDIR /app
 
