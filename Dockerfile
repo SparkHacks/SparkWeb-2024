@@ -1,4 +1,10 @@
 FROM node:lts AS runtime
+
+LABEL "org.opencontainers.image.source"="https://github.com/sparkhacks/sparkweb"
+LABEL "org.opencontainers.image.title"="sparkweb"
+LABEL "org.opencontainers.image.url"="https://github.com/sparkhacks/sparkweb"
+LABEL "wtf" "1"
+
 WORKDIR /app
 
 COPY . .
