@@ -1,3 +1,4 @@
+import { date } from "astro/zod";
 import StarHeader from "./StarHeader.tsx";
 
 const schedulingData = [
@@ -97,24 +98,32 @@ const preWorkshop = [
     time: "5:00 pm - 6:30 pm",
     description: "Git Yourself Together (Intro to Git and Version Control)",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg",
+    location: "ARC 136",
+    maps: "https://maps.app.goo.gl/M1pk7PSRw5CJgKJ2A",
   },
   {
     date: "February 6th",
     time: "5:00 pm - 6:30 pm",
     description: "Intro to React.js and Tailwind CSS",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    location: "ARC 241",
+    maps: "https://maps.app.goo.gl/M1pk7PSRw5CJgKJ2A",
   },
   {
     date: "February 7th",
     time: "5:00 pm - 6:30 pm",
     description: "Intro to Google Firebase (Backend)",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    location: "ARC 242",
+    maps: "https://maps.app.goo.gl/M1pk7PSRw5CJgKJ2A",
   },
   {
     date: "February 8th",
     time: "5:00 pm - 6:30 pm",
     description: "Team Formation + Social",
     image: "https://icons.veryicon.com/png/o/miscellaneous/site-icon-library/team-28.png",
+    location: "SELE 2260",
+    maps: "https://maps.app.goo.gl/BxDWteiQ9seMLbch7",
   },
 ]
 
@@ -137,23 +146,26 @@ function WorkshopCard({ children }: { children: React.ReactNode }) {
 
 export default function Schedule() {
   return (
-    <section id="schedule" className="w-full min-h-screen bg-stars-pattern bg-[length:300px_300px] "> 
+    <section id="schedule" className="w-full min-h-screen bg-stars-pattern bg-[length:300px_300px] ">
       <div className="flex flex-col items-center justify-center mt-10 mb-10">
-      <StarHeader text="Pre-Hack Workshops" />
+        <StarHeader text="Pre-Hack Workshops" />
         <div className="flex flex-wrap items-center justify-center mt-12 gap-10">
-        {preWorkshop.map((day, i) => (
-          <WorkshopCard 
-          key={i}>
-            <img src={day.image} alt="" className="w-20 h-20 rounded-full object-contain brightness-0 invert" />
-            <h1 className="text-3xl font-poppin font-[500]">{day.date}</h1>
-            <h1 className="text-2xl font-poppin font-[500] ">{day.time}</h1>
-            <p className="text-lg font-poppin">{day.description}</p>
-          </WorkshopCard>
-        ))}
-      </div>
+          {preWorkshop.map((day, i) => (
+            <WorkshopCard
+              key={i}>
+              <img src={day.image} alt="" className="w-20 h-20 pt-5 rounded-full object-contain brightness-0 invert" />
+              <div className="flex flex-wrap items-center justify-center gap-1">
+                <h1 className="text-3xl font-poppin font-[500]">{day.date}</h1>
+                <a className=" text-[#FFCE6A] cursor-pointer" href={day.maps} target="_blank">{day.location}</a>
+              </div>
+              <h1 className="text-2xl font-poppin font-[500] ">{day.time}</h1>
+              <p className="text-lg font-poppin pb-5">{day.description}</p>
+            </WorkshopCard>
+          ))}
+        </div>
       </div>
 
-      <StarHeader text="Schedule"/>
+      <StarHeader text="Schedule" />
 
       <div className="flex flex-wrap justify-center gap-28 my-10">
         {schedulingData.map((day, i) => (
