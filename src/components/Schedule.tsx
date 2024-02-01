@@ -137,7 +137,7 @@ function ScheduleCard({ children }: { children: React.ReactNode }) {
 
 function WorkshopCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-[26px] w-[300px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col p-6 text-white font-poppin justify-center items-center gap-4 text-center h-[300px]">
+    <div className="rounded-[26px] w-[300px] border-4 border-[#FFDAB9] border-[4px_solid_#FFDAB9] shadow-[0px_0px_4px_0px_#FFDAB9] backdrop-blur-[19.5px] flex flex-col py-3 px-6 text-white font-poppin justify-start items-center gap-4 text-center h-[320px]">
       {children}
     </div>
   );
@@ -153,8 +153,8 @@ export default function Schedule() {
           {preWorkshop.map((day, i) => (
             <WorkshopCard
               key={i}>
-              <img src={day.image} alt="" className="w-20 h-20 pt-5 rounded-full object-contain brightness-0 invert" />
-              <div className="flex flex-wrap items-center justify-center gap-1">
+              <img src={day.image} alt="" className="w-20 h-20 pt-2 object-contain brightness-0 invert" />
+              <div className="flex flex-wrap items-center justify-center gap-1 flex-col">
                 <h1 className="text-3xl font-poppin font-[500]">{day.date}</h1>
                 <a className=" text-[#FFCE6A] cursor-pointer" href={day.maps} target="_blank">{day.location}</a>
               </div>
