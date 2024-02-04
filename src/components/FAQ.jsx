@@ -32,7 +32,7 @@ const faqData = [
   { 
     id: 6,
     question: "Do I need a team to participate in SparkHacks?", 
-    answer: "Yes, teams should have at least 2 members and up to 5 members. We will be having a Team Formation Social to help you find potential teammates!" 
+    answer: "Yes, you must participate in teams of 2 to 5 members MAX. We will be having a Team Formation Social to help you find potential teammates!" 
   },
   { 
     id: 7,
