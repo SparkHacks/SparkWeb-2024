@@ -10,7 +10,7 @@ const teamMember = [
   {
       name: "Darlene Marchan",
       title: "Co-Director",
-      image: "/team/sparky.jpg",
+      image: "/team/darlene.JPG",
       linkedin: "https://www.linkedin.com/in/darlene-marchan/"
   },
   {
@@ -58,7 +58,7 @@ const teamMember = [
   {
       name: "Sana Topia",
       title: "Outreach",
-      image: "/team/sparky.jpg",
+      image: "/team/sana.JPG",
       linkedin: "https://www.linkedin.com/in/sana-topia-9172ba225/"
   },
   {
@@ -89,7 +89,7 @@ const teamMember = [
   {
       name: "Niharika Patil",
       title: "Logistics",
-      image: "/team/sparky.jpg",
+      image: "/team/niharika.JPG",
       linkedin: "https://www.linkedin.com/in/niharika-patil1468/"
   },
   {
@@ -125,13 +125,13 @@ const teamMember = [
   {
       name: "Yamaan Nandolia",
       title: "Experience  ",
-      image: "/team/sparky.jpg",
+      image: "/team/yamaan.jpg",
       linkedin: "https://www.linkedin.com/in/yamaan-nandolia-09abb1215/"
   },
   {
       name: "Rahin Jain",
       title: "Experience  ",
-      image: "/team/sparky.jpg",
+      image: "/team/anonymous.JPG",
       linkedin: "https://www.linkedin.com/in/rahinj/"
   },
   {
@@ -143,13 +143,13 @@ const teamMember = [
   {
       name: "Flora Huang",
       title: "Web Dev",
-      image: "/team/sparky.jpg",
+      image: "/team/flora.JPG",
       linkedin: "https://www.linkedin.com/in/fhuang113/"
   },
   {
       name: "Sam Effendy",
       title: "Web Dev",
-      image: "/team/sparky.jpg",
+      image: "/team/sam.JPG",
       linkedin: "https://www.linkedin.com/in/samef/"
   },
   {
@@ -161,7 +161,7 @@ const teamMember = [
   {
       name: "Zhi",
       title: "Web Dev  ",
-      image: "/team/sparky.jpg",
+      image: "/team/anonymous.JPG",
       linkedin: ""
   }
 ]
