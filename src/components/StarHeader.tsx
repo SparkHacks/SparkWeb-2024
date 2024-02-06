@@ -25,7 +25,7 @@ export default function StarHeader({ text }: { text: string }) {
       </div>
 
       <h1
-        className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin lg:text-[50px] 
+        className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin sm:text-[40px] lg:text-[50px] 
         text-3xl font-[500]"
       >
         {text}
