@@ -125,7 +125,7 @@ const teamMember = [
   {
       name: "Yamaan Nandolia",
       title: "Experience  ",
-      image: "/team/yamaan.jpg",
+      image: "/team/yamaan.JPG",
       linkedin: "https://www.linkedin.com/in/yamaan-nandolia-09abb1215/"
   },
   {
@@ -165,8 +165,6 @@ const teamMember = [
       linkedin: ""
   }
 ]
-
-
 
 
 export default function Team(){
