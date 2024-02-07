@@ -32,9 +32,9 @@ const faqData = [
   { 
     id: 6,
     question: "Do I need a team to participate in SparkHacks?", 
-    answer: "Yes, you must participate in teams of 2 to 5 members MAX. We will be having a Team Formation Social to help you find potential teammates!" 
+    answer: "Yes, teams must consist of 2 to 5 members; Individual participation is not allowed due to devpost rules, and the event's nature is not conducive to solo participation. However, we will be having a Team Formation Social to help you find potential teammates!" 
   },
-  { 
+  {  
     id: 7,
     question: "Can I start working on my project before SparkHacks begins?", 
     answer: "No, all projects must be started and developed during SparkHacks. Participants are expected to attend the opening session to learn of the tracks and corresponding prompts." 
@@ -42,7 +42,7 @@ const faqData = [
   { 
     id: 8,
     question: "Where can I find SparkHacks resources?", 
-    answer: "All SparkHacks resources, including guidelines, workshops, resources to help you best prepare, and other relevant information, will be available in the HackPack." 
+    answer: "All SparkHacks resources, including guidelines, workshops, resources to help you best prepare, and other relevant information, is currently available in the HackPack." 
   },
   { 
     id: 9,
