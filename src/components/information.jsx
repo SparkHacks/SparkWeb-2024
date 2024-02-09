@@ -21,18 +21,16 @@ function useTimer(deadline, interval = SECOND) {
   }, [interval]);
 
   return {
-    days: Math.floor(timespan / DAY),
-    hours: Math.floor((timespan / HOUR) % 24),
-    minutes: Math.floor((timespan / MINUTE) % 60),
-    seconds: Math.floor((timespan / SECOND) % 60)
+    days: Math.max(Math.floor(timespan / DAY), 0),
+    hours: Math.max(Math.floor((timespan / HOUR) % 24), 0),
+    minutes: Math.max(Math.floor((timespan / MINUTE) % 60), 0),
+    seconds: Math.max(Math.floor((timespan / SECOND) % 60), 0)
   };
 }
 
 
-
-
 export default function Information() {
-  const { days, hours, minutes, seconds } = useTimer("2024-02-09T15:30:00");
+  const { days, hours, minutes, seconds } = useTimer("2024-02-10T22:30:36.004Z");
 
   return(
     <section className="bg-stars-pattern w-full min-h-[300px] py-4 pb-20 flex lg:flex-row flex-col lg:gap-0 gap-[50px] overflow-x-hidden bg-[length:300px_300px] ">
@@ -46,7 +44,7 @@ export default function Information() {
           <h1 className=" animate-bounce lg:text-[50px] text-3xl">🚀</h1>
           <h1 className=" text-[#FFCE6A] text-center drop-shadow-[0px_0px_7px_#FFCE6A] font-poppin lg:text-[50px] 
           text-3xl font-[500]">
-            Take Off In...</h1>
+            Landing In...</h1>
         </div>
         <motion.div
         initial={{  opacity: 0, y:20 }}
