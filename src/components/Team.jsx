@@ -131,7 +131,7 @@ const teamMember = [
   {
       name: "Rahin Jain",
       title: "Experience  ",
-      image: "/team/anonymous.JPG",
+      image: "/team/rahin.JPG",
       linkedin: "https://www.linkedin.com/in/rahinj/"
   },
   {
@@ -159,10 +159,10 @@ const teamMember = [
       linkedin: "https://www.linkedin.com/in/angel-carbajal/"
   },
   {
-      name: "Zhi",
+      name: "Zi Jun Wang",
       title: "Web Dev  ",
       image: "/team/anonymous.JPG",
-      linkedin: ""
+      linkedin: "https://www.linkedin.com/in/zi-jun-wang/"
   }
 ]
 
