@@ -30,7 +30,7 @@ function useTimer(deadline, interval = SECOND) {
 
 
 export default function Information() {
-  const { days, hours, minutes, seconds } = useTimer("2024-02-10T22:30:36.004Z");
+  const { days, hours, minutes, seconds } = useTimer("2024-02-10T22:00:36.004Z");
 
   return(
     <section className="bg-stars-pattern w-full min-h-[300px] py-4 pb-20 flex lg:flex-row flex-col lg:gap-0 gap-[50px] overflow-x-hidden bg-[length:300px_300px] ">
